@@ -1,0 +1,336 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Execute the entire Ansible role imperatively",
+  "input_method": "environment",
+  "parameters": {
+    "mysql_port": {
+      "description": "MySQL connection settings.",
+      "type": "Optional[String]"
+    },
+    "mysql_socket": {
+      "description": "",
+      "type": "Optional[String]"
+    },
+    "mysql_bind_address": {
+      "description": "Ansible role variable (default: 0.0.0.0)",
+      "type": "Optional[String]"
+    },
+    "mysql_datadir": {
+      "description": "Ansible role variable (default: /var/lib/mysql)",
+      "type": "Optional[String]"
+    },
+    "mysql_pid_file": {
+      "description": "",
+      "type": "Optional[String]"
+    },
+    "mysql_sql_mode": {
+      "description": "",
+      "type": "Optional[String]"
+    },
+    "mysql_syslog_tag": {
+      "description": "",
+      "type": "Optional[String]"
+    },
+    "mysql_log": {
+      "description": "Logging settings.",
+      "type": "Optional[String]"
+    },
+    "mysql_log_error": {
+      "description": "",
+      "type": "Optional[String]"
+    },
+    "mysql_slow_query_log_file": {
+      "description": "",
+      "type": "Optional[String]"
+    },
+    "mysql_slow_query_time": {
+      "description": "Ansible role variable (default: 2)",
+      "type": "Optional[String]"
+    },
+    "mysql_server_id": {
+      "description": "Replication settings (replication is only enabled if master/user have values).",
+      "type": "Optional[String]"
+    },
+    "mysql_expire_logs_days": {
+      "description": "Ansible role variable (default: 10)",
+      "type": "Optional[String]"
+    },
+    "mysql_max_binlog_size": {
+      "description": "Ansible role variable (default: 100M)",
+      "type": "Optional[String]"
+    },
+    "mysql_binlog_format": {
+      "description": "Ansible role variable (default: ROW)",
+      "type": "Optional[String]"
+    },
+    "mysql_key_buffer_size": {
+      "description": "Memory settings (default values optimized ~512MB RAM).",
+      "type": "Optional[String]"
+    },
+    "mysql_max_allowed_packet": {
+      "description": "Ansible role variable (default: 64M)",
+      "type": "Optional[String]"
+    },
+    "mysql_table_open_cache": {
+      "description": "Ansible role variable (default: 256)",
+      "type": "Optional[String]"
+    },
+    "mysql_sort_buffer_size": {
+      "description": "Ansible role variable (default: 1M)",
+      "type": "Optional[String]"
+    },
+    "mysql_read_buffer_size": {
+      "description": "Ansible role variable (default: 1M)",
+      "type": "Optional[String]"
+    },
+    "mysql_read_rnd_buffer_size": {
+      "description": "Ansible role variable (default: 4M)",
+      "type": "Optional[String]"
+    },
+    "mysql_myisam_sort_buffer_size": {
+      "description": "Ansible role variable (default: 64M)",
+      "type": "Optional[String]"
+    },
+    "mysql_thread_cache_size": {
+      "description": "Ansible role variable (default: 8)",
+      "type": "Optional[String]"
+    },
+    "mysql_query_cache_type": {
+      "description": "their previous MySQL counterparts",
+      "type": "Optional[String]"
+    },
+    "mysql_query_cache_size": {
+      "description": "Ansible role variable (default: 16M)",
+      "type": "Optional[String]"
+    },
+    "mysql_query_cache_limit": {
+      "description": "Ansible role variable (default: 1M)",
+      "type": "Optional[String]"
+    },
+    "mysql_max_connections": {
+      "description": "Ansible role variable (default: 151)",
+      "type": "Optional[String]"
+    },
+    "mysql_tmp_table_size": {
+      "description": "Ansible role variable (default: 16M)",
+      "type": "Optional[String]"
+    },
+    "mysql_max_heap_table_size": {
+      "description": "Ansible role variable (default: 16M)",
+      "type": "Optional[String]"
+    },
+    "mysql_group_concat_max_len": {
+      "description": "Ansible role variable (default: 1024)",
+      "type": "Optional[String]"
+    },
+    "mysql_join_buffer_size": {
+      "description": "Ansible role variable (default: 262144)",
+      "type": "Optional[String]"
+    },
+    "mysql_wait_timeout": {
+      "description": "Ansible role variable (default: 28800)",
+      "type": "Optional[String]"
+    },
+    "mysql_lower_case_table_names": {
+      "description": "Other settings.",
+      "type": "Optional[String]"
+    },
+    "mysql_event_scheduler_state": {
+      "description": "Ansible role variable (default: OFF)",
+      "type": "Optional[String]"
+    },
+    "mysql_innodb_large_prefix": {
+      "description": "These settings require MySQL > 5.5.",
+      "type": "Optional[String]"
+    },
+    "mysql_innodb_file_format": {
+      "description": "Ansible role variable (default: barracuda)",
+      "type": "Optional[String]"
+    },
+    "mysql_innodb_file_per_table": {
+      "description": "InnoDB settings.",
+      "type": "Optional[String]"
+    },
+    "mysql_innodb_buffer_pool_size": {
+      "description": "Set .._buffer_pool_size up to 80% of RAM but beware of setting too high.",
+      "type": "Optional[String]"
+    },
+    "mysql_innodb_log_file_size": {
+      "description": "Set .._log_file_size to 25% of buffer pool size.",
+      "type": "Optional[String]"
+    },
+    "mysql_innodb_log_buffer_size": {
+      "description": "Ansible role variable (default: 8M)",
+      "type": "Optional[String]"
+    },
+    "mysql_innodb_flush_log_at_trx_commit": {
+      "description": "Ansible role variable (default: 1)",
+      "type": "Optional[String]"
+    },
+    "mysql_innodb_lock_wait_timeout": {
+      "description": "Ansible role variable (default: 50)",
+      "type": "Optional[String]"
+    },
+    "mysql_mysqldump_max_allowed_packet": {
+      "description": "mysqldump settings.",
+      "type": "Optional[String]"
+    },
+    "mysql_config_include_dir": {
+      "description": "",
+      "type": "Optional[String]"
+    },
+    "mysql_root_username": {
+      "description": "Ansible role variable (default: root)",
+      "type": "Optional[String]"
+    },
+    "mysql_root_password": {
+      "description": "Ansible role variable (default: root)",
+      "type": "Optional[String]"
+    },
+    "mysql_user_name": {
+      "description": "Ansible role variable (default: root)",
+      "type": "Optional[String]"
+    },
+    "mysql_user_password": {
+      "description": "Ansible role variable (default: root)",
+      "type": "Optional[String]"
+    },
+    "mysql_user_home": {
+      "description": "or sudo access",
+      "type": "Optional[String]"
+    },
+    "mysql_root_home": {
+      "description": "The default root user installed by mysql - almost always root",
+      "type": "Optional[String]"
+    },
+    "mysql_root_password_update": {
+      "description": "Set this to `true` to forcibly update the root password.",
+      "type": "Optional[Boolean]"
+    },
+    "mysql_user_password_update": {
+      "description": "",
+      "type": "Optional[Boolean]"
+    },
+    "mysql_enabled_on_startup": {
+      "description": "Ansible role variable (default: true)",
+      "type": "Optional[Boolean]"
+    },
+    "overwrite_global_mycnf": {
+      "description": "Whether my.cnf should be updated on every run.",
+      "type": "Optional[Boolean]"
+    },
+    "mysql_copy_root_user_mycnf": {
+      "description": "Whether to copy root user's config file with credentials to their homedir",
+      "type": "Optional[Boolean]"
+    },
+    "mysql_enablerepo": {
+      "description": "for RedHat systems (and derivatives).",
+      "type": "Optional[String]"
+    },
+    "mysql_python_package_debian": {
+      "description": "Ansible role variable (default: python3-mysqldb)",
+      "type": "Optional[String]"
+    },
+    "mysql_skip_name_resolve": {
+      "description": "",
+      "type": "Optional[Boolean]"
+    },
+    "mysql_log_file_group": {
+      "description": "Log file settings.",
+      "type": "Optional[String]"
+    },
+    "mysql_slow_query_log_enabled": {
+      "description": "Slow query log settings.",
+      "type": "Optional[Boolean]"
+    },
+    "mysql_config_include_files": {
+      "description": "Ansible role variable (default: [])",
+      "type": "Optional[Array]"
+    },
+    "mysql_databases": {
+      "description": "Databases.",
+      "type": "Optional[Array]"
+    },
+    "mysql_users": {
+      "description": "Users.",
+      "type": "Optional[Array]"
+    },
+    "mysql_disable_log_bin": {
+      "description": "",
+      "type": "Optional[Boolean]"
+    },
+    "mysql_replication_role": {
+      "description": "Ansible role variable (default: )",
+      "type": "Optional[String]"
+    },
+    "mysql_replication_master": {
+      "description": "Ansible role variable (default: )",
+      "type": "Optional[String]"
+    },
+    "mysql_replication_master_inventory_host": {
+      "description": "Ansible role variable (default: {{ mysql_replication_master }})",
+      "type": "Optional[String]"
+    },
+    "mysql_replication_user": {
+      "description": "Same keys as `mysql_users` above.",
+      "type": "Optional[Array]"
+    },
+    "mysql_hide_passwords": {
+      "description": "",
+      "type": "Optional[Boolean]"
+    },
+    "par_tags": {
+      "description": "An array of Ansible tags to execute (optional)",
+      "type": "Optional[Array[String]]"
+    },
+    "par_skip_tags": {
+      "description": "An array of Ansible tags to skip (optional)",
+      "type": "Optional[Array[String]]"
+    },
+    "par_start_at_task": {
+      "description": "The name of the task to start execution at (optional)",
+      "type": "Optional[String]"
+    },
+    "par_limit": {
+      "description": "Limit playbook execution to specific hosts (optional)",
+      "type": "Optional[String]"
+    },
+    "par_verbose": {
+      "description": "Enable verbose output from Ansible (optional)",
+      "type": "Optional[Boolean]"
+    },
+    "par_check_mode": {
+      "description": "Run Ansible in check mode (dry-run) (optional)",
+      "type": "Optional[Boolean]"
+    },
+    "par_timeout": {
+      "description": "Timeout in seconds for playbook execution (optional)",
+      "type": "Optional[Integer]"
+    },
+    "par_user": {
+      "description": "Remote user to use for Ansible connections (optional)",
+      "type": "Optional[String]"
+    },
+    "par_env_vars": {
+      "description": "Additional environment variables for ansible-playbook execution (optional)",
+      "type": "Optional[Hash]"
+    }
+  },
+  "implementations": [
+    {
+      "name": "paw_ansible_role_mysql.sh",
+      "requirements": [
+        "shell"
+      ],
+      "input_method": "environment"
+    },
+    {
+      "name": "paw_ansible_role_mysql.ps1",
+      "requirements": [
+        "powershell"
+      ],
+      "input_method": "environment"
+    }
+  ]
+}
