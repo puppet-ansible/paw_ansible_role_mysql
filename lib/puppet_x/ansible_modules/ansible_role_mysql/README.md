@@ -93,6 +93,7 @@ The MySQL users and their privileges. A user has the values:
   - `state`  (defaults to `present`)
   - `case_sensitive` (defaults to `false`)
   - `update_password` (defaults to `always`)
+  - `tls_requires` (defaults to `{}`)
 
 The formats of these are the same as in the `mysql_user` module.
 
@@ -131,7 +132,7 @@ mysql_log_file_group: mysql *adm on Debian*
 mysql_log: ""
 mysql_log_error: *default value depends on OS*
 mysql_syslog_tag: *default value depends on OS*
-```yaml
+```
 
 MySQL logging configuration. Setting `mysql_log` (the general query log) or `mysql_log_error` to `syslog` will make MySQL log to syslog using the `mysql_syslog_tag`.
 
